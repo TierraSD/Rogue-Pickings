@@ -58,16 +58,18 @@ p{
 
 header{
 	display: flex;
-	width: 100%;
-	justify-content: space-between;
-	align-items: initial;
+	justify-content: center;
+	align-items: center;
 	border-bottom:3px solid #77a466;
 	margin: 0 auto;
+	flex-flow: row wrap;
 }
 
 header h1{
+	text-align: center;
+	width: 100%;
 	margin:0px;
-	padding:38px 0px;
+	border-bottom: 3px solid #77a466;
 }
 
 header h1 span{
@@ -75,18 +77,21 @@ header h1 span{
 }
 
 header nav{
-	padding:30px 0px 20px 0px;
+	padding:46px 0;
 }
 
 nav ul li{
-	display: inline-block;
-	margin: 0 auto;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	padding-bottom: 25px;
+	margin:0 auto;
 }
 
 nav ul li a{
 	color:#77a466;
 	font-weight:bold;
-	font-size:14px;
+	font-size:0.875em;
 	text-transform:uppercase;
 	text-decoration:none;
 	padding: 0px 10px;
@@ -102,10 +107,7 @@ nav ul li a{
 
 .main-image img{
 	border-bottom:3px solid #77a466;
-	width: 100%
-}
-
-.main-title{
+	width: 100%;
 }
 
 .main-title h3{
@@ -123,7 +125,7 @@ nav ul li a{
 /***** Bottom Section *****/
 
 .section-one,.section-two,.section-three{
-	width:399px;
+	width:100%;
 	border-top:1px solid #eee;
 }
 
@@ -131,13 +133,8 @@ nav ul li a{
 	padding:10px 0px;
 }
 
-.section-two{
-	border-left:1px solid #eee;
-	border-right:1px solid #eee;
-}
-
 .section-two h4,.section-three h4{
-	padding:10px 30px;
+	padding:10px 0px;
 }
 
 .menu{
@@ -152,13 +149,15 @@ nav ul li a{
 
 .reviews{
 	color:#333333;
-	font-size:16px;
+	font-size:1em;
 	line-height:21px;
+	padding:10px 0px;
 }
 
 .address{
-	font-size:16px;
+	font-size:1em;
 	line-height:24px;
+	padding:10px 0px;
 }
 
 footer{
@@ -178,3 +177,24 @@ footer span{
 	font-size:14px;
 }
 
+@media all and (min-width: 768px){
+	.bottom-section{
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-flow: row wrap;
+		margin:0px auto;
+	} 
+
+	.section-one,.section-two,.section-three{
+		width:100%;
+		border-top:1px solid #eee;
+	}
+}
+
+@media all and (min-width: 1200px){
+	header nav ul{
+		display: flex;
+		justify-content: space-between;
+	}
+}
